@@ -1,0 +1,264 @@
+body
+{
+	margin: 0;
+	background-color: rgb(20, 25, 28);
+	color: #edb680;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+	transition: all 2s ease-in-out;
+}
+
+
+.navbar{
+	background-color: rgb(20, 25, 28);
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	z-index: 1000; 
+	border-bottom: 0.01px solid #edb680;
+	opacity: 0.95;
+	transition: all 1s ease-in-out;
+}
+
+.hidden {
+	opacity: 0;
+	z-index: 0;
+}
+
+.menu{
+	list-style-type: none;
+	margin: 10px;
+	padding: 10px;
+	font-size: 15px;
+	min-height: 35px;
+	line-height: 200%;
+	font-weight: 700;
+}
+
+.menu > li{
+	display: inline;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+}
+
+.menu > li:first-child
+{
+	padding-left: 400px;
+}
+
+
+.menu a
+{
+	color: #edb680;
+    font-family: "Josefin Slab", serif;
+    font-size: 18px;
+	text-decoration: none;
+}
+
+.menu a:hover
+{
+	color: #807264;
+}
+
+.logo
+{
+    float: left;
+    padding: 20px;
+    font-family: "Josefin Slab", serif;
+    font-size: 28px;
+}
+
+.logo:hover
+{
+    color: #807264;
+	cursor: default;
+}
+
+.home
+{
+    height: 100vh;
+    width: 100%;
+    background-image: url('images/my_photo.jpg');
+	background-position: center;
+	background-size: cover;
+	transition: background-size 3s ease;
+	position: relative;
+}
+
+.home-descriptipon
+{
+	position: absolute;
+	bottom: 15%;
+	left: 20%;
+	padding: 10px;
+	min-width: 60%;
+	min-height: 20%;
+	border: 0.01px solid #edb680;
+	font-family: "Major Mono Display", monospace;
+	font-weight: 400;
+	font-style: normal;
+
+}
+
+.home-descriptipon h1
+{
+	font-family: "Major Mono Display", monospace;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 36px;
+}
+
+.home-descriptipon a
+{
+	font-family: "Major Mono Display", monospace;
+	font-weight: 400;
+	font-style: normal;
+	color: blanchedalmond;
+	font-size: 22px;
+}
+
+.education
+{
+	height: 100vh;
+    width: 100%;
+    background-image: url('images/AEII.jpg');
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+.education-descriptipon
+{
+	position: absolute;
+	bottom: 60%;
+	left: 5%;
+	padding: 10px;
+	min-width: 60%;
+	min-height: 20%;
+	border: 0.01px solid #8c4905;
+	color: #ff8307;
+	font-family: "Major Mono Display", monospace;
+	font-weight: 700;
+	font-style: normal;
+	transition: all 2s ease-in-out;
+}
+
+.education-descriptipon:hover
+{
+	filter: contrast(120%);
+	color: #ff8307;
+	background-color: #fefefe;
+	opacity: 0.7;
+}
+
+.work
+{
+	text-align: center;
+	height: 100vh;
+    width: 100%;
+	position: relative;
+	font-family: "Major Mono Display", monospace;
+	font-weight: 700;
+	font-style: normal;
+	border-radius: 5px;
+	background-color: #1e2028;
+}
+
+.boeing
+{
+	position: absolute;
+	bottom: 70%;
+	left: 20%;
+	padding: 10px;
+	min-width: 60%;
+	min-height: 20%;
+	background-image: url("images/boeing_grey.jpg");
+	background-position: center;
+	background-size: cover;
+	opacity: 0.7;
+	border: 0.01px solid #f5bd86;
+	color: #f5bd86;
+	margin-right: 10px;
+	transition: all 1s ease-in-out;
+}
+
+.boeing:hover
+{
+	opacity: 1;
+	filter: contrast(150%);
+	left: 0%;
+	background-image: url("images/boeing.jpg");
+	color: #f78c20;
+}
+
+.rockwell
+{
+	position: absolute;
+	bottom: 40%;
+	padding: 10px;
+	min-width: 60%;
+	min-height: 20%;
+	color: #f5bd86;
+	background-image: url("images/rockwell_grey.jpg");
+	background-position: center;
+	background-size: cover;
+	opacity: 0.7;
+	border: 0.01px solid #f5bd86;
+	margin-right: 20%;
+	transition: all 1s ease-in-out;
+}
+
+.rockwell:hover
+{
+	opacity: 1;
+	filter: contrast(120%);
+	margin-right: 0%;
+	background-image: url("images/rockwell.jpg");
+	color: #f78c20;
+}
+
+.apa
+{
+	position: absolute;
+	bottom: 10%;
+	left: 20%;
+	padding: 10px;
+	min-width: 60%;
+	min-height: 20%;
+	color: #f5bd86;
+	background-image: url("images/apa_grey.jpg");
+	background-position: center;
+	background-size: cover;
+	opacity: 0.7;
+	border: 0.01px solid #f5bd86;
+	margin-right: 10px;
+	transition: all 1s ease-in-out;
+}
+
+.apa:hover
+{
+	opacity: 1;
+	filter: contrast(150%);
+	left: 0%;
+	background-image: url("images/apa.jpg");
+	color: #f78c20;
+}
+
+.projects
+{
+	text-align: center;
+	height: 100vh;
+    width: 100%;
+	position: relative;
+	background-color: rgb(20, 25, 28);
+}
+
+.contact
+{
+	text-align: center;
+	height: 100vh;
+    width: 100%;
+	position: relative;
+	background-color: #1e2028;
+}
