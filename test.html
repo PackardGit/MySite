@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: top 0.5s; /* Dodaj efekt przejścia */
+        }
+
+        .content {
+            margin-top: 60px; /* Dodaj margines górny, aby zawartość nie była ukryta pod navbar */
+            padding: 20px;
+        }
+
+        .hidden {
+            top: -60px; /* Ukryj navbar przez przesunięcie go w górę */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Moja Nawigacja</h1>
+        <nav>
+            <a href="#section1" style="color: white; text-decoration: none; margin: 0 15px;">Sekcja 1</a>
+            <a href="#section2" style="color: white; text-decoration: none; margin: 0 15px;">Sekcja 2</a>
+            <a href="#section3" style="color: white; text-decoration: none; margin: 0 15px;">Sekcja 3</a>
+        </nav>
+    </div>
+
+    <div class="content">
+        <h2 id="section1">Sekcja 1</h2>
+        <p>Treść sekcji 1...</p>
+
+        <h2 id="section2">Sekcja 2</h2>
+        <p>Treść sekcji 2...</p>
+
+        <h2 id="section3">Sekcja 3</h2>
+        <p>Treść sekcji 3...</p>
+    </div>
+
+    <script>
+        // Zmienna przechowująca poprzednią pozycję scrolla
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', function() {
+            // Aktualna pozycja scrolla
+            let scrollTop = window.scrollY;
+
+            if (scrollTop > lastScrollTop) {
+                // Przewijanie w dół
+                navbar.classList.add('hidden');
+            } else {
+                // Przewijanie w górę
+                navbar.classList.remove('hidden');
+            }
+            // Zaktualizuj poprzednią pozycję scrolla
+            lastScrollTop = scrollTop;
+        });
+    </script>
+</body>
+</html>
