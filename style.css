@@ -98,7 +98,14 @@ body
 	font-family: "Major Mono Display", monospace;
 	font-weight: 400;
 	font-style: normal;
+	transition: all 0.5s ease-in-out;
+}
 
+.home-descriptipon:hover
+{
+	filter: contrast(120%);
+	background-color: #363232;
+	opacity: 0.5;
 }
 
 .home-descriptipon h1
@@ -117,6 +124,30 @@ body
 	color: blanchedalmond;
 	font-size: 22px;
 }
+
+.icons
+{
+	text-align: center;
+}
+
+.icon
+{
+	display: inline;
+	cursor: pointer;
+}
+
+.icon a
+{
+	color: #807264;
+	transition: all 0.5s ease-in-out;
+}
+
+.icon a:hover
+{
+	color: #d0883f;
+	opacity: 1;
+}
+
 
 .education
 {
@@ -141,7 +172,7 @@ body
 	font-family: "Major Mono Display", monospace;
 	font-weight: 700;
 	font-style: normal;
-	transition: all 2s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 
 .education-descriptipon:hover
@@ -152,7 +183,7 @@ body
 	opacity: 0.7;
 }
 
-.work
+.works
 {
 	text-align: center;
 	height: 100vh;
@@ -163,6 +194,11 @@ body
 	font-style: normal;
 	border-radius: 5px;
 	background-color: #1e2028;
+}
+
+.works h1
+{
+	padding: 20px;
 }
 
 .boeing
@@ -180,7 +216,7 @@ body
 	border: 0.01px solid #f5bd86;
 	color: #f5bd86;
 	margin-right: 10px;
-	transition: all 1s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 
 .boeing:hover
@@ -206,7 +242,7 @@ body
 	opacity: 0.7;
 	border: 0.01px solid #f5bd86;
 	margin-right: 20%;
-	transition: all 1s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 
 .rockwell:hover
@@ -233,8 +269,9 @@ body
 	opacity: 0.7;
 	border: 0.01px solid #f5bd86;
 	margin-right: 10px;
-	transition: all 1s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
+
 
 .apa:hover
 {
@@ -252,13 +289,53 @@ body
     width: 100%;
 	position: relative;
 	background-color: rgb(20, 25, 28);
+	padding: 20px;
 }
 
-.contact
+.project
 {
-	text-align: center;
-	height: 100vh;
+    position: relative;
+    display: inline-block;
+    width: 600px; 
+	height: 500px; 
+    padding: 10px;
+    border-radius: 5px;
+    border: 0.01px solid #f5bd86;
+    margin: 20px auto;  
+	
+}
+
+.project img{
+	width: 100%;
+	height: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.video
+{
     width: 100%;
-	position: relative;
-	background-color: #1e2028;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 1); 
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+	padding-top: 20px;
+	opacity: 0.5;
+}
+
+.project:hover .overlay {
+    opacity: 0;
+	filter: contrast(120%);
 }

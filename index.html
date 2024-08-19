@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
 
@@ -19,8 +21,9 @@
 			<ul class="menu">
                 <li><a href="#home">Home</a></li>
 				<li><a href="#about_me">About Me</a></li>
+				<li><a href="#jobs">Experience</a></li>
 				<li><a href="#projects">Projects</a></li>
-				<li><a href="#contact">Contact</a></li>
+				<!-- /*<li><a href="#contact">Contact</a></li> -->
 			</ul>
 		</nav>
 	</header>
@@ -32,6 +35,21 @@
 					<div class="home-descriptipon">
 						<h1>Adrian Dratwinski</h1>
 						<a>Innovative Engineering Solutions for a Better Tomorrow</a>
+						<div class="icons">
+							<div class="icon" id="github">
+								<a href="https://github.com/PackardGit" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+							</div>
+							<div class="icon" id="linkedin">
+								<a href="https://www.linkedin.com/in/adrian-dratwiński-29b8791b5/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+							</div>
+							<div class="icon" id="mail" onclick="window.location.href='mailto:adrian.dratwinski@gmail.com'">
+								<a><i class="fas fa-envelope fa-2x"></i></a>
+							</div>
+							<div class="icon" id="linkedin">
+								<a href="files/cv.pdf" target="_blank"><i class="fas fa-download fa-2x"></i></a>
+							</div>
+						</div>
+						
 					</div>
                 </div>
             </section>
@@ -47,7 +65,8 @@
 						</a>
 					</div>
 				</div>
-				<div class="work">
+				<div class="works" id="jobs">
+					<h1>Work experience</h1>
 					<div class="boeing">
 						<h1>Institute of Aviation, Łukasiewicz Research Network</h1>
 						<h2>Duration: 2023 - Now</h2>
@@ -67,7 +86,23 @@
 				</div>
 			</section>
 			<section>
-				<div class="projects" id="projects"></div>
+				<div class="projects" id="projects">
+					<h1>Projects</h1>
+					<div class="project" id="virtual-interview">
+						<video class="video"  autoplay loop muted>
+							<source src="videos/chat.mp4" type="video/mp4"></video>
+							<a href="http://adriandratwinski.pythonanywhere.com" target="_blank"><div class="overlay"></div></a>
+						
+					</div>
+					<div class="project" id="lung-diesease-app">
+						<img src="images/lungwebapp.png" alt="Lung Web application">
+						<a href="https://github.com/PackardGit/Lung-disease-detection" target="_blank"><div class="overlay"></div></a>
+					</div>
+					<div class="project" id="lung-diesease-app">
+						<img src="images/mori.png" alt="Mori game">
+						<a href="https://github.com/PackardGit/Browswer-Game" target="_blank"><div class="overlay"></div></a>
+					</div>
+				</div>
 			</section>
 			<section>
 				<div class="contact" id="contact"></div>
