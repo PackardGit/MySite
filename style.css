@@ -128,6 +128,7 @@ body
 .icons
 {
 	text-align: center;
+	padding-top: 10px;
 }
 
 .icon
@@ -299,27 +300,29 @@ body
     width: 600px; 
 	height: 500px; 
     padding: 10px;
-    border-radius: 5px;
-    border: 0.01px solid #f5bd86;
+    border: 0.01px solid #020101;
     margin: 20px auto;  
 	
 }
 
 .project img{
 	width: 100%;
-	height: 100%;
-    border-radius: 10px;
-    display: block;
+	height: 80%;
+	padding-top: 8%;
 }
 
 .video
 {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    display: block;
+	width: 100%;
+	height: 80%;
+	padding-top: 7.5%;
 }
 
+.slider {
+	width: 100%;
+	height: 80%;
+	padding-top: 8%;
+}
 
 .overlay {
     position: absolute;
@@ -328,7 +331,6 @@ body
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 1); 
-    border-radius: 10px;
     opacity: 0;
     transition: all 0.5s ease-in-out;
 	padding-top: 20px;

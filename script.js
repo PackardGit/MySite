@@ -1,6 +1,11 @@
 let size = 100;
 let increasing = true;
 let container = document.getElementById('home');
+let moriImgNr = 1;
+let lubgIngNr = 1;
+let fadingTime = 300;
+let slideTime = 3000
+
 setInterval(() => {
     if (increasing) {
         size += 2;
@@ -16,9 +21,9 @@ setInterval(() => {
     container.style.backgroundSize = `${size}% ${size}%`;
 }, 100); 
 
-let workGrad = document.querySelector('.work');
 document.addEventListener('mousemove', (e) => {
     
+    let workGrad = document.querySelector('.works');
     let posXWork = e.clientX / workGrad.offsetWidth * 100;
     let posYWork = e.clientY / workGrad.offsetHeight * 100;
     workGrad.style.background = `radial-gradient(circle at ${posXWork}% ${posYWork}%, rgba(221, 155, 90, 0.1), transparent)`;
@@ -40,3 +45,29 @@ window.addEventListener('scroll', () => {
     }
     lastScrollTop = scrollTop;
 });
+
+function fadingOut(){
+    $("#mori").fadeOut(fadingTime);
+    $("#lung").fadeOut(fadingTime);
+}
+
+function changeSlide(){
+    
+    moriImgNr ++; if (moriImgNr>10) moriImgNr=1;
+    let moriFile = "<img src=\"images/mori/mori" + moriImgNr + ".png\" alt=\"Mori game\"/>"
+    document.getElementById("mori").innerHTML = moriFile;
+    $("#mori").fadeIn(fadingTime);
+    
+
+    lubgIngNr ++; if (lubgIngNr>2) lubgIngNr=1;
+    let lungFile = "<img src=\"images/lung/lung" + lubgIngNr + ".png\" alt=\"Lung app\"/>"
+    document.getElementById("lung").innerHTML = lungFile;
+    $("#lung").fadeIn(fadingTime);
+
+    setTimeout("changeSlide()", slideTime);
+    setTimeout("fadingOut()", slideTime-fadingTime);
+}
+
+function start(){
+    changeSlide()
+}
